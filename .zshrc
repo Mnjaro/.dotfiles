@@ -8,6 +8,8 @@ alias glo="git log --graph --decorate --oneline"
 alias config='/usr/bin/git --git-dir=/home/jaro/.dotfiles/ --work-tree=/home/jaro'
 alias fcopy='fzf | xclip -selection clipboard'
 alias vfind='nvim $(fzf)'
+alias l='ls -l'
+alias la='ls -la'
 
 ###############################################################################
 #####                                                                     #####
