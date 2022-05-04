@@ -14,6 +14,7 @@ Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --all' }
 Plug 'projekt0n/github-nvim-theme'
 Plug 'https://github.com/pangloss/vim-javascript'
 Plug 'https://github.com/leafgarland/typescript-vim'
+Plug 'townk/vim-autoclose'
 call plug#end()
 
 " -----------------------------------------------------------------------------
