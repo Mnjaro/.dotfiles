@@ -42,6 +42,10 @@ set shiftwidth=2
 set expandtab
 
 xnoremap p pgvy
+" Go to previous line with same indentation as current
+nnoremap <M-,> :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%<' . line('.') . 'l\S', 'be')<CR>
+" Go to next line with same indentation as current
+nnoremap <M-.> :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%>' . line('.') . 'l\S', 'e')<CR>
 
 " -----------------------------------------------------------------------------
 " NERDTree 
