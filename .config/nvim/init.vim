@@ -12,6 +12,8 @@ Plug 'junegunn/vim-easy-align'
 Plug 'preservim/nerdtree'
 Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --all' }
 Plug 'projekt0n/github-nvim-theme'
+Plug 'https://github.com/pangloss/vim-javascript'
+Plug 'https://github.com/leafgarland/typescript-vim'
 call plug#end()
 
 " -----------------------------------------------------------------------------
@@ -68,3 +70,11 @@ let g:github_colors = {
 \ }
 
 colorscheme github_dark
+
+
+" -----------------------------------------------------------------------------
+" Javascript Syntax
+" -----------------------------------------------------------------------------
+" Enables syntax highlighting for JSDocs
+let g:javascript_plugin_jsdoc = 1
+
