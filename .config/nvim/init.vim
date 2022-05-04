@@ -10,7 +10,8 @@
 call plug#begin('~/.config/plugged')
 Plug 'junegunn/vim-easy-align'
 Plug 'preservim/nerdtree'
-Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
+Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --all' }
+Plug 'projekt0n/github-nvim-theme'
 call plug#end()
 
 " -----------------------------------------------------------------------------
@@ -52,3 +53,18 @@ nnoremap <C-f> :NERDTreeFind<CR>
 xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+
+" -----------------------------------------------------------------------------
+" Github Theme
+" -----------------------------------------------------------------------------
+let g:github_function_style = "italic"
+let g:github_sidebars = ["qf", "vista_kind", "terminal", "packer"]
+
+" Change the "hint" color to the "orange" color, and make the "error" color bright red
+let g:github_colors = {
+  \ 'hint': 'orange',
+  \ 'error': '#ff0000'
+\ }
+
+colorscheme github_dark
