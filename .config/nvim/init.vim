@@ -15,6 +15,7 @@ Plug 'projekt0n/github-nvim-theme'
 Plug 'https://github.com/pangloss/vim-javascript'
 Plug 'https://github.com/leafgarland/typescript-vim'
 Plug 'townk/vim-autoclose'
+Plug  'Yggdroot/indentLine'
 call plug#end()
 
 " -----------------------------------------------------------------------------
@@ -35,9 +36,12 @@ endif
 " Global VIM Settings 
 " -----------------------------------------------------------------------------
 set rnu
+" Add a symbol on tab usage
+set tabstop=2
+set shiftwidth=2
+set expandtab
 
 xnoremap p pgvy
-
 
 " -----------------------------------------------------------------------------
 " NERDTree 
@@ -64,7 +68,6 @@ nmap ga <Plug>(EasyAlign)
 let g:github_function_style = "italic"
 let g:github_sidebars = ["qf", "vista_kind", "terminal", "packer"]
 
-" Change the "hint" color to the "orange" color, and make the "error" color bright red
 let g:github_colors = {
   \ 'hint': 'orange',
   \ 'error': '#ff0000'
@@ -78,4 +81,11 @@ colorscheme github_dark
 " -----------------------------------------------------------------------------
 " Enables syntax highlighting for JSDocs
 let g:javascript_plugin_jsdoc = 1
+
+
+
+" -----------------------------------------------------------------------------
+" Indent Line
+" -----------------------------------------------------------------------------
+let g:indentLine_char = '|'
 
