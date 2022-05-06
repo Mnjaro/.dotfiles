@@ -57,4 +57,4 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/home/jaro/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/jaro/google-cloud-sdk/completion.zsh.inc'; fi
+if [ -f '/opt/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/google-cloud-sdk/completion.zsh.inc'; fi
