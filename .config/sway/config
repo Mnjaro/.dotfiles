@@ -141,6 +141,7 @@ xwayland enable
 
 exec waybar &
 exec autotiling &
+exec dunst &
 exec systemctl --user import-environment WAYLAND_DISPLAY &
 exec systemctl --user start thinkpadbacklight.service &
 exec systemctl --user start thinkpadbacklight-restart.timer &
