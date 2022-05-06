@@ -9,8 +9,8 @@ set $right l
 set $term kitty
 set $menu wofi
 
-set $lock 'grim /tmp/screen.png; corrupter /tmp/screen.png /tmp/screen.png; swaylock -fi /tmp/screen.png --effect-vignette 0.5:0.5 --clock --indicator-radius 100 --indicator-thickness 7  --ring-color ebdbb2 --key-hl-color 282828 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --fade-in 0.2'
-set $lidlock 'swaylock -i /home/theo/Pictures/archpc_gruvbox_glitch.png --effect-vignette 0.5:0.5 --clock --indicator-radius 100 --indicator-thickness 7  --ring-color ebdbb2 --key-hl-color 282828 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --fade-in 0.2'
+set $lock 'swaylock --config ~/.config/swaylock/config'
+set $lidlock 'swaylock --config ~/.config/swaylock/config'
 
 set $laptop_screen 'eDP-1'
 
@@ -25,8 +25,8 @@ output eDP-1 {
 
 output * bg ~/Media/Pictures/archpc_gruvbox.png fill
 
-exec swayidle timeout 510 'brightnessctl -s && brightnessctl set 5%' resume 'brightnessctl -r' timeout 510 'notify-send "Screen" "Locking in 30 seconds..."' timeout 540 'grim /tmp/screen.png; corrupter /tmp/screen.png /tmp/screen.png; swaylock -fi /tmp/screen.png --effect-vignette 0.5:0.5 --clock --indicator-radius 100 --indicator-thickness 7  --ring-color ebdbb2 --key-hl-color 282828 --line-color 00000000 --inside-color 00000088 --separator-color 00000000 --grace 2 --fade-in 0.2' timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' timeout 900 'systemctl suspend'
-exec swayidle before-sleep $lidlock
+# exec swayidle timeout 510 
+# exec swayidle before-sleep $lidlock
 
 bindsym $mod+Return exec $term
 bindsym $mod+q kill
