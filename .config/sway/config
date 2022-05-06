@@ -129,6 +129,9 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# Custom bindings to software
+bindsym $mod+p exec grim -g "$(slurp -d)" - | wl-copy
+
 default_border pixel 2
 
 smart_gaps on
