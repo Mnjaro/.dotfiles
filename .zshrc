@@ -21,14 +21,10 @@ alias la='ls -la'
 source <(antibody init)
 antibody bundle < ~/.zsh_plugins.txt
 
-# Spaceship configuration
-zstyle :compinstall filename '/home/jaro/.zshrc'
-autoload -Uz compinit
-compinit
-export SPACESHIP_GCLOUD_SHOW=false
-
 # Zsh
 zstyle ':completion:*' menu select
+export LC_CTYPE=en_US.UTF-8
+export SPACESHIP_GCLOUD_SHOW=false
 
 # NVM
 export NVM_DIR="$([ -z "/home/jaro" ] && printf %s "/home/jaro/.nvm" || printf %s "/home/jaro/.nvm")"
@@ -43,10 +39,7 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 ##
-#
-# Set Spaceship ZSH as a prompt
-autoload -U promptinit; promptinit
-prompt spaceship
+
 
 # FZF
 # Setting fd as the default source for fzf
