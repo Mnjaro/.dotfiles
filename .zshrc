@@ -56,5 +56,6 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # Customize default fzf command
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 
+# Google cloud sdk
 # The next line enables shell command completion for gcloud.
 if [ -f '/opt/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/google-cloud-sdk/completion.zsh.inc'; fi
