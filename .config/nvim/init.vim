@@ -11,7 +11,7 @@ call plug#begin('~/.config/plugged')
 Plug 'junegunn/vim-easy-align'
 Plug 'preservim/nerdtree'
 Plug 'morhetz/gruvbox'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'https://github.com/pangloss/vim-javascript'
 Plug 'https://github.com/leafgarland/typescript-vim'
 Plug 'townk/vim-autoclose'
