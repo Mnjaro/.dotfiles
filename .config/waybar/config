@@ -3,7 +3,7 @@
     "height": 25,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["custom/vpn","idle_inhibitor", "pulseaudio", "network", "backlight", "battery", "clock"],
+    "modules-right": ["custom/vpn","idle_inhibitor", "pulseaudio", "network", "backlight", "battery", "battery#bat2", "clock"],
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
@@ -50,7 +50,8 @@
         "states": {
             // "good": 95,
             "warning": 30,
-            "critical": 15
+            "critical": 15,
+            "low": 5
         },
         "format": "{capacity}% {icon}",
         "format-charging": "{capacity}% ",
@@ -58,6 +59,23 @@
         "format-alt": "{time} {icon}",
         // "format-good": "",
         "format-full": "100% ",
+        "format-low": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "battery#bat2": {
+        "bat": "BAT1",
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15,
+            "low": 0
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-full": "100% ",
+        "format-low": "",
         "format-icons": ["", "", "", "", ""]
     },
     "network": {
