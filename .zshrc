@@ -56,3 +56,6 @@ if [ -f '/opt/google-cloud-sdk/completion.zsh.inc' ]; then . '/opt/google-cloud-
 # Uncommited variables
 source ~/.zshrc_not_commited
 
+# SSH Agent related
+# Necessary for the systemd service to work
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
