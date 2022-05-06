@@ -10,6 +10,7 @@ alias fcopy='fzf | xclip -selection clipboard'
 alias vfind='nvim $(fzf)'
 alias l='ls -l'
 alias la='ls -la'
+alias colorpicker='grim -g "$(slurp -p)" -t ppm - | convert - -format "%[pixel:p{0,0}]" txt:-'
 
 ###############################################################################
 #####                                                                     #####
