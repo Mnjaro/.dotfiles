@@ -10,8 +10,8 @@
 call plug#begin('~/.config/plugged')
 Plug 'junegunn/vim-easy-align'
 Plug 'preservim/nerdtree'
-Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --all' }
-Plug 'projekt0n/github-nvim-theme'
+Plug 'morhetz/gruvbox'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'https://github.com/pangloss/vim-javascript'
 Plug 'https://github.com/leafgarland/typescript-vim'
 Plug 'townk/vim-autoclose'
@@ -21,6 +21,7 @@ call plug#end()
 " -----------------------------------------------------------------------------
 " Color 
 " -----------------------------------------------------------------------------
+autocmd vimenter * ++nested colorscheme gruvbox
 
 "to do Enable 24-bit true colors if your terminal supports it.
 
@@ -64,20 +65,6 @@ nnoremap <C-f> :NERDTreeFind<CR>
 xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
-
-
-" -----------------------------------------------------------------------------
-" Github Theme
-" -----------------------------------------------------------------------------
-let g:github_function_style = "italic"
-let g:github_sidebars = ["qf", "vista_kind", "terminal", "packer"]
-
-let g:github_colors = {
-  \ 'hint': 'orange',
-  \ 'error': '#ff0000'
-\ }
-
-colorscheme github_dark
 
 
 " -----------------------------------------------------------------------------
