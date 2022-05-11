@@ -4,4 +4,4 @@ set $term kitty --config ~/.config/kitty/kitty.tokyo-night.conf
 
 #set $lock 'swaylock --config ~/.config/swaylock/config.gruvbox'
 
-#output * bg ~/Media/Pictures/archpc_gruvbox.png fill
+output * bg ~/Media/Pictures/tokyo-night.jpg fill
