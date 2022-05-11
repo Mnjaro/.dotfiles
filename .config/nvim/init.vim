@@ -10,18 +10,12 @@
 call plug#begin('~/.config/plugged')
 Plug 'junegunn/vim-easy-align'
 Plug 'preservim/nerdtree'
-Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'https://github.com/pangloss/vim-javascript'
 Plug 'https://github.com/leafgarland/typescript-vim'
 Plug 'townk/vim-autoclose'
 Plug  'Yggdroot/indentLine'
 call plug#end()
-
-" -----------------------------------------------------------------------------
-" Color 
-" -----------------------------------------------------------------------------
-autocmd vimenter * ++nested colorscheme gruvbox
 
 "to do Enable 24-bit true colors if your terminal supports it.
 
@@ -80,3 +74,4 @@ let g:javascript_plugin_jsdoc = 1
 " -----------------------------------------------------------------------------
 let g:indentLine_char = '|'
 
+source /home/jaro/.config/nvim/themes/gruvbox
