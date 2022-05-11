@@ -6,7 +6,8 @@ set $down j
 set $up k
 set $right l
 
-include ~/.config/sway/themes/gruvbox
+#include ~/.config/sway/themes/gruvbox
+include ~/.config/sway/themes/tokyo-night
 
 set $laptop_screen 'eDP-1'
 
