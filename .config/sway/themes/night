@@ -10,3 +10,4 @@ client.focused #6689cf #6689cf #6689cf #6689cf #6689cf
 client.unfocused #12131A #12131A #12131A #12131A #12131A
 client.focused_inactive #12131A #12131A #12131A #12131A #12131A
 
+exec mako
