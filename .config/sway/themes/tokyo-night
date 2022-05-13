@@ -1,7 +1,0 @@
-
-set $term kitty --config ~/.config/kitty/kitty.tokyo-night.conf
-#set $menu wofi -c ~/.config/wofi/gruvbox/config -s ~/.config/wofi/gruvbox/style.css
-
-#set $lock 'swaylock --config ~/.config/swaylock/config.gruvbox'
-
-output * bg ~/Media/Pictures/tokyo-night.jpg fill

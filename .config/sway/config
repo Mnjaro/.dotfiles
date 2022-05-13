@@ -6,8 +6,8 @@ set $down j
 set $up k
 set $right l
 
-include ~/.config/sway/themes/gruvbox
-#include ~/.config/sway/themes/tokyo-night
+#include ~/.config/sway/themes/gruvbox
+include ~/.config/sway/themes/night
 
 set $laptop_screen 'eDP-1'
 
@@ -147,10 +147,6 @@ exec systemctl --user start thinkpadbacklight.service &
 exec systemctl --user start thinkpadbacklight-restart.timer &
 exec wl-paste -t text --watch clipman store &
 
-
-client.focused #ebdbb2 #ebdbb2 #ebdbb2 #ebdbb2 #ebdbb2
-client.unfocused #453a3a #453a3a #453a3a #453a3a #453a3a
-client.focused_inactive #453a3a #453a3a #453a3a #453a3a #453a3a
 
 include /etc/sway/config.d/*
 

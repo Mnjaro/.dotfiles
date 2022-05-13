@@ -1,0 +1,109 @@
+{
+    "position": "top", 
+    "height": 20,
+    "modules-left": ["sway/workspaces"],
+    "modules-right": ["clock", "network", "pulseaudio", "battery", "battery#2", "custom/date", "temperature", "disk", "memory", "cpu", "tray"],
+    // Modules configuration
+	"sway/workspaces": {
+		"disable-scroll": true,
+		"all-outputs": true,
+		"format": "{icon}",
+	 	"persistent_workspaces": {
+	 		"1": [],
+	 		"2": [],
+	 		"3": [],
+	 		"4": [],
+	 		"5": [],
+	 		"6": [],
+	 		"7": [],
+	 		"8": []
+	},
+         	"format-icons": {
+             		"1": "dev",
+             		"2": "www",
+             		"3": "dev2",
+             		"4": "doc",
+             		"5": "sys",
+             		"6": "chat",
+             		"7": "music",
+             		"8": "media"
+         }
+     },
+	"custom/date": {
+    		"format": "󰸗 {}",
+		"interval": 3600,
+		"exec": "/home/loki/bin/waybar-date.sh"
+	},
+	"custom/power": {
+		"format": "󰐥",
+		"on-click": "/home/loki/bin/waybar-power.sh"
+	},
+	"clock": {
+		"format": " {:%H:%M}",
+        	"format-alt": " {:%Y-%m-%d}"
+	},
+	"battery": {
+                "bat": "BAT0",
+        	"states": {
+            		"warning": 15,
+            		"critical": 5,
+        	},
+        	"format": "{icon} {capacity}%",
+                "format-charging": "⚡{icon} {capacity}%",
+        	"format-icons": ["", "", "", "", "", "",""]
+	},
+	"battery#2": {
+                "bat": "BAT1",
+        	"states": {
+            		"warning": 15,
+            		"critical": 5,
+        	},
+        	"format": "{icon} {capacity}%",
+                "format-charging": "⚡{icon} {capacity}%",
+        	"format-icons": ["", "", "", "", "", "",""]
+	},
+  "temperature": {
+    "hwmon-path": "/sys/class/hwmon/hwmon4/temp1_input",
+    // "critical-threshold": 80,
+    // "format-critical": "{temperatureC}°C ",
+    "format": "CPU {temperatureC}°C "
+  },
+	"network": {
+        	"format-wifi": "  {essid}: {ipaddr}",
+        	"format-ethernet": " : {ipaddr}",
+        	"format-linked": "{ifname} (No IP)",
+        	"format-disconnected": "Disconnected",
+        	"format-alt": "{ifname}: {ipaddr}/{cidr}"
+	},
+	"pulseaudio": {
+		"format": "{icon} {volume}%",
+        	"format-muted": " Muted",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [""]
+        },
+    },
+    "tray": {
+        "icon-size": 13,
+        "spacing": 5,
+    }, 
+    "disk": {
+      "interval": 30,
+      "format": "ROOT {percentage_free}% Free",
+      "path": "/"
+    }, 
+    "memory": {
+        "interval": 30,
+        "format": "RAM {used:0.1f}G/{total:0.1f}G "
+    },
+    "cpu": {
+        "interval": 10,
+        "format": "CPU {}% ",
+        "max-length": 20
+    }
+}

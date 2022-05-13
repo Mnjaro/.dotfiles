@@ -1,0 +1,12 @@
+
+set $term kitty --config ~/.config/kitty/kitty.night.conf
+set $menu wofi -c ~/.config/wofi/night/config -s ~/.config/wofi/night/style.css
+
+set $lock 'swaylock --config ~/.config/swaylock/config.night'
+
+output * bg ~/Media/Pictures/dark-mountains.jpg fill
+
+client.focused #6689cf #6689cf #6689cf #6689cf #6689cf
+client.unfocused #12131A #12131A #12131A #12131A #12131A
+client.focused_inactive #12131A #12131A #12131A #12131A #12131A
+
