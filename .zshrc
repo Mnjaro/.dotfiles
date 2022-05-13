@@ -8,8 +8,8 @@ alias glo="git log --graph --decorate --oneline"
 alias config='/usr/bin/git --git-dir=/home/jaro/.cfg/ --work-tree=/home/jaro'
 alias fcopy='fzf | xclip -selection clipboard'
 alias vfind='nvim $(fzf)'
-alias l='ls -l'
-alias la='ls -la'
+alias l='logo-ls'
+alias la='logo-ls -la'
 alias colorpicker='grim -g "$(slurp -p)" -t ppm - | convert - -format "%[pixel:p{0,0}]" txt:-'
 alias gb="git branch | grep '^\*' | cut -d' ' -f2 | xclip -sel clipboard"
 alias sqlproxy-eimy-dev="cloud_sql_proxy -instances=eimy-cloud:europe-west3:dev=tcp:5433 & disown %cloud_sql_proxy"
