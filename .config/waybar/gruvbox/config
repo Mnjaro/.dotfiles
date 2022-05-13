@@ -36,8 +36,10 @@
         "spacing": 0
     },
     "clock": {
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "exec": "date +'%Y-%m-%d %H:%M:%S'",
+        "interval": 1,
+        "tooltip": false,
+        "on-click": "kitty --config ~/.config/kitty/kitty.gruvbox.conf -e 'calcurse'"    
     },
     "backlight": {
         // "device": "acpi_video1",
