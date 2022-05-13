@@ -15,16 +15,24 @@ Plug 'https://github.com/pangloss/vim-javascript'
 Plug 'https://github.com/leafgarland/typescript-vim'
 Plug 'townk/vim-autoclose'
 Plug  'Yggdroot/indentLine'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 call plug#end()
 
 "to do Enable 24-bit true colors if your terminal supports it.
+set termguicolors " this variable must be enabled for colors to be applied properly
 
 " -----------------------------------------------------------------------------
 " Fonts 
 " -----------------------------------------------------------------------------
+<<<<<<<< HEAD:.config/backup.nvim/init.vim
 "if has('gui_running')
 "  set guifont=Roboto-Bold:h11
 "endif
+========
+if has('gui_running')
+  set guifont="FiraCode Nerd Font"
+endif
+>>>>>>>> 7905159 (Delete old config):.config/nvim/init.vim
 
 
 " -----------------------------------------------------------------------------
@@ -76,4 +84,14 @@ let g:javascript_plugin_jsdoc = 1
 let g:indentLine_char = '|'
 
 " source /home/jaro/.config/nvim/themes/gruvbox
+<<<<<<<< HEAD:.config/backup.nvim/init.vim
 " source /home/jaro/.config/nvim/themes/ayu
+========
+source /home/jaro/.config/nvim/themes/night
+
+
+" -----------------------------------------------------------------------------
+" Nerd Tree
+" -----------------------------------------------------------------------------
+
+>>>>>>>> 7905159 (Delete old config):.config/nvim/init.vim

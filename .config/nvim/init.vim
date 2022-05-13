@@ -1,4 +1,3 @@
-    
 " -----------------------------------------------------------------------------
 " This config is targeted for Vim 8.1+ and expects you to have Plug installed.
 " -----------------------------------------------------------------------------
@@ -15,22 +14,39 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'https://github.com/pangloss/vim-javascript'
 Plug 'https://github.com/leafgarland/typescript-vim'
 Plug 'townk/vim-autoclose'
+<<<<<<< HEAD
 Plug 'Yggdroot/indentLine'
 Plug 'hashivim/vim-terraform'
 call plug#end()
 
+=======
+Plug  'Yggdroot/indentLine'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+call plug#end()
+
+"to do Enable 24-bit true colors if your terminal supports it.
+set termguicolors " this variable must be enabled for colors to be applied properly
+
+" -----------------------------------------------------------------------------
+" Fonts 
+" -----------------------------------------------------------------------------
+if has('gui_running')
+  set guifont="FiraCode Nerd Font"
+endif
 
 " -----------------------------------------------------------------------------
 " Global VIM Settings 
 " -----------------------------------------------------------------------------
 set rnu
 " Add a symbol on tab usage
-set tabstop=4
-set shiftwidth=4
 set expandtab
 let g:vim_json_conceal=0
 :nmap <Esc>> :vertical res +1<Enter>
 :nmap <Esc>< :vertical res -1<Enter>
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set termguicolors     
 
 xnoremap p pgvy
 " Go to previous line with same indentation as current
@@ -80,3 +96,12 @@ let g:indentLine_char = '|'
 " Prettier
 " -----------------------------------------------------------------------------
 command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
+
+" source /home/jaro/.config/nvim/themes/gruvbox
+" source /home/jaro/.config/nvim/themes/ayu
+source /home/jaro/.config/nvim/themes/night
+
+
+" -----------------------------------------------------------------------------
+" Nerd Tree
+" -----------------------------------------------------------------------------
