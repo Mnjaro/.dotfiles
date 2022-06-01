@@ -35,6 +35,7 @@ set rnu
 set tabstop=2
 set shiftwidth=2
 set expandtab
+set termguicolors     
 
 xnoremap p pgvy
 " Go to previous line with same indentation as current
@@ -74,4 +75,5 @@ let g:javascript_plugin_jsdoc = 1
 " -----------------------------------------------------------------------------
 let g:indentLine_char = '|'
 
-source /home/jaro/.config/nvim/themes/gruvbox
+" source /home/jaro/.config/nvim/themes/gruvbox
+source /home/jaro/.config/nvim/themes/ayu
