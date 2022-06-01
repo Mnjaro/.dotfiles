@@ -1,3 +1,9 @@
+# Antigen
+source $HOME/antigen.zsh
+antigen theme spaceship-prompt/spaceship-prompt
+antigen apply
+
+
 # Aliases
 alias v="nvim $1"
 alias xrandr-left="xrandr --output DP-1-2 --mode 1920x1080 --left-of eDP-1"
@@ -18,9 +24,6 @@ alias colorpicker='grim -g "$(slurp -p)" -t ppm - | convert - -format "%[pixel:p
 #####                                                                     #####
 ###############################################################################
 
-# Antibody
-source <(antibody init)
-antibody bundle < ~/.zsh_plugins.txt
 
 # Zsh
 zstyle ':completion:*' menu select
@@ -54,9 +57,8 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/jaro/dev/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/jaro/dev/google-cloud-sdk/completion.zsh.inc'; fi
 
-# Uncommited variables
-source ~/.zshrc_not_commited
 
 # SSH Agent related
 # Necessary for the systemd service to work
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
