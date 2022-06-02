@@ -1,3 +1,4 @@
+
 " -----------------------------------------------------------------------------
 " This config is targeted for Vim 8.1+ and expects you to have Plug installed.
 " -----------------------------------------------------------------------------
@@ -17,15 +18,6 @@ Plug 'townk/vim-autoclose'
 Plug  'Yggdroot/indentLine'
 call plug#end()
 
-"to do Enable 24-bit true colors if your terminal supports it.
-
-" -----------------------------------------------------------------------------
-" Fonts 
-" -----------------------------------------------------------------------------
-if has('gui_running')
-  set guifont=Roboto-Bold:h11
-endif
-
 
 " -----------------------------------------------------------------------------
 " Global VIM Settings 
@@ -35,7 +27,6 @@ set rnu
 set tabstop=2
 set shiftwidth=2
 set expandtab
-set termguicolors     
 
 xnoremap p pgvy
 " Go to previous line with same indentation as current
@@ -74,6 +65,3 @@ let g:javascript_plugin_jsdoc = 1
 " Indent Line
 " -----------------------------------------------------------------------------
 let g:indentLine_char = '|'
-
-" source /home/jaro/.config/nvim/themes/gruvbox
-source /home/jaro/.config/nvim/themes/ayu

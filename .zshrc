@@ -1,9 +1,3 @@
-# Antigen
-source $HOME/antigen.zsh
-antigen theme spaceship-prompt/spaceship-prompt
-antigen apply
-
-
 # Aliases
 alias v="nvim $1"
 alias xrandr-left="xrandr --output DP-1-2 --mode 1920x1080 --left-of eDP-1"
@@ -61,4 +55,7 @@ if [ -f '/home/jaro/dev/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/ja
 # SSH Agent related
 # Necessary for the systemd service to work
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
+autoload -U promptinit; promptinit
+prompt spaceship
 
