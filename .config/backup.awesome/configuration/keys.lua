@@ -28,26 +28,6 @@ awful.keyboard.append_global_keybindings({
 		awful.spawn(apps.default.terminal)
 	end, { description = "open terminal", group = "app" }),
 
-	-- App launcher
-	awful.key({ mod }, "d", function()
-		awful.spawn.with_shell(apps.default.app_launcher)
-	end, { description = "open app launcher", group = "app" }),
-
-	-- Code editor
-	awful.key({ mod, shift }, "e", function()
-		awful.spawn(apps.default.code_editor)
-	end, { description = "open code editor", group = "app" }),
-
-	-- File manager
-	awful.key({ mod, shift }, "f", function()
-		awful.spawn(apps.default.file_manager)
-	end, { description = "open file manager", group = "app" }),
-
-	-- Web browser
-	awful.key({ mod, shift }, "w", function()
-		awful.spawn(apps.default.web_browser)
-	end, { description = "open web browser", group = "app" }),
-
 	---- WM
 	---------
 	-- Restart awesome
