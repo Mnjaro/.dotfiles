@@ -11,6 +11,7 @@ alias vfind='nvim $(fzf)'
 alias l='ls -l'
 alias la='ls -la'
 alias colorpicker='grim -g "$(slurp -p)" -t ppm - | convert - -format "%[pixel:p{0,0}]" txt:-'
+alias gb="git branch | grep '^\*' | cut -d' ' -f2 | xclip -sel clipboard"
 
 ###############################################################################
 #####                                                                     #####
@@ -60,3 +61,9 @@ autoload -U promptinit; promptinit
 prompt spaceship
 
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform
+
+# Automate ssh-agent startup
+[ -z "$SSH_AUTH_SOCK" ] && eval "$(ssh-agent -s)"
