@@ -15,7 +15,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'https://github.com/pangloss/vim-javascript'
 Plug 'https://github.com/leafgarland/typescript-vim'
 Plug 'townk/vim-autoclose'
-Plug  'Yggdroot/indentLine'
+Plug 'Yggdroot/indentLine'
+Plug 'hashivim/vim-terraform'
 call plug#end()
 
 
@@ -42,6 +43,7 @@ nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
+let NERDTreeQuitOnOpen=1
 
 
 " -----------------------------------------------------------------------------
