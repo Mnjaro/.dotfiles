@@ -51,27 +51,6 @@ editor_cmd = terminal .. " -e " .. editor
 modkey = "Mod4"
 -- }}}
 
--- {{{ Menu
--- Create a launcher widget and a main menu
-myawesomemenu = {
-   { "hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
-   { "manual", terminal .. " -e man awesome" },
-   { "edit config", editor_cmd .. " " .. awesome.conffile },
-   { "restart", awesome.restart },
-   { "quit", function() awesome.quit() end },
-}
-
-mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "open terminal", terminal }
-                                  }
-                        })
-
-mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
-                                     menu = mymainmenu })
-
--- Menubar configuration
-menubar.utils.terminal = terminal -- Set the terminal for applications that require it
--- }}}
 
 -- {{{ Tag layout
 -- Table of layouts to cover with awful.layout.inc, order matters.
@@ -163,20 +142,6 @@ screen.connect_signal("request::desktop_decoration", function(s)
         }
     }
 
-    -- Create a tasklist widget
-    s.mytasklist = awful.widget.tasklist {
-        screen  = s,
-        filter  = awful.widget.tasklist.filter.currenttags,
-        buttons = {
-            awful.button({ }, 1, function (c)
-                c:activate { context = "tasklist", action = "toggle_minimization" }
-            end),
-            awful.button({ }, 3, function() awful.menu.client_list { theme = { width = 250 } } end),
-            awful.button({ }, 4, function() awful.client.focus.byidx(-1) end),
-            awful.button({ }, 5, function() awful.client.focus.byidx( 1) end),
-        }
-    }
-
     -- Create the wibox
     s.mywibox = awful.wibar {
         position = "top",
@@ -234,7 +199,7 @@ ruled.client.connect_signal("request::rules", function()
             instance = { "copyq", "pinentry" },
             class    = {
                 "Arandr", "Blueman-manager", "Gpick", "Kruler", "Sxiv",
-                "Tor Browser", "Wpa_gui", "veromix", "xtightvncviewer"
+                "Alacritty", "Wpa_gui", "veromix", "xtightvncviewer"
             },
             -- Note that the name property shown in xprop might be set slightly after creation of the client
             -- and the name shown there might not match defined rules here.
@@ -247,7 +212,10 @@ ruled.client.connect_signal("request::rules", function()
                 "pop-up",         -- e.g. Google Chrome's (detached) Developer Tools.
             }
         },
-        properties = { floating = true }
+        properties = { 
+          floating = true, 
+          placement = awful.placement.centered 
+        }
     }
 
     -- Add titlebars to normal clients and dialogs
@@ -256,12 +224,6 @@ ruled.client.connect_signal("request::rules", function()
         rule_any   = { type = { "normal", "dialog" } },
         properties = { titlebars_enabled = true      }
     }
-
-    -- Set Firefox to always map on the tag named "2" on screen 1.
-    -- ruled.client.append_rule {
-    --     rule       = { class = "Firefox"     },
-    --     properties = { screen = 1, tag = "2" }
-    -- }
 end)
 -- }}}
 
