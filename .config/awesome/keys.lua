@@ -53,6 +53,7 @@ awful.keyboard.append_global_keybindings({
             end
         end,
     },
+    awful.key({modkey, ctrl }, "o", awful.client.movetoscreen),
     awful.key {
         modifiers = { modkey, "Shift" },
         keygroup    = "numrow",
