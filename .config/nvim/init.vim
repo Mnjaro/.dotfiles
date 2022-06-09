@@ -1,4 +1,4 @@
-
+    
 " -----------------------------------------------------------------------------
 " This config is targeted for Vim 8.1+ and expects you to have Plug installed.
 " -----------------------------------------------------------------------------
@@ -25,9 +25,10 @@ call plug#end()
 " -----------------------------------------------------------------------------
 set rnu
 " Add a symbol on tab usage
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set expandtab
+let g:vim_json_conceal=0
 
 xnoremap p pgvy
 " Go to previous line with same indentation as current
@@ -62,8 +63,13 @@ nmap ga <Plug>(EasyAlign)
 let g:javascript_plugin_jsdoc = 1
 
 
-
 " -----------------------------------------------------------------------------
 " Indent Line
 " -----------------------------------------------------------------------------
 let g:indentLine_char = '|'
+
+" -----------------------------------------------------------------------------
+" Prettier
+" -----------------------------------------------------------------------------
+command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
+
