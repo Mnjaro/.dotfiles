@@ -8,11 +8,12 @@ local dpi = xresources.apply_dpi
 
 local gfs = require("gears.filesystem")
 local themes_path = gfs.get_themes_dir()
-local custom_themes_path = gfs.get_configuration_dir().. "themes"
+local custom_themes_path = gfs.get_configuration_dir().. "/themes/"
 
 local theme = {}
 
 theme.font          = "SF Mono"
+theme.wallpaper     = custom_themes_path .. "green_moon/green_moon.jpg"
 
 theme.bg_normal     = "#222222"
 theme.bg_focus      = "#535d6c"

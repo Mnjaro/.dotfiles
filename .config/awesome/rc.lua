@@ -36,7 +36,7 @@ end)
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_configuration_dir() .. "themes/green_moon/main.lua")
+beautiful.init(gears.filesystem.get_configuration_dir() .. "themes/green_moon/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
@@ -76,20 +76,20 @@ end)
 -- {{{ Wallpaper
 screen.connect_signal("request::wallpaper", function(s)
     awful.wallpaper {
-        screen = s,
-        widget = {
-            {
-                image     = beautiful.wallpaper,
-                upscale   = true,
-                downscale = true,
-                widget    = wibox.widget.imagebox,
-            },
-            valign = "center",
-            halign = "center",
-            tiled  = false,
-            widget = wibox.container.tile,
-        }
+    screen  = s,
+    bg      = "#1C1C1C",
+    widget  = {
+        {
+            image  = beautiful.wallpaper,
+            resize = true,
+            widget = wibox.widget.imagebox,
+        },
+        valign = "center",
+        halign = "center",
+        tiled  = false,
+        widget = wibox.container.tile,
     }
+}
 end)
 -- }}}
 
@@ -199,7 +199,7 @@ ruled.client.connect_signal("request::rules", function()
             instance = { "copyq", "pinentry" },
             class    = {
                 "Arandr", "Blueman-manager", "Gpick", "Kruler", "Sxiv",
-                "Alacritty", "Wpa_gui", "veromix", "xtightvncviewer"
+                "Wpa_gui", "veromix", "xtightvncviewer"
             },
             -- Note that the name property shown in xprop might be set slightly after creation of the client
             -- and the name shown there might not match defined rules here.

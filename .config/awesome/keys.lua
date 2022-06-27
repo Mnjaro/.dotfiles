@@ -80,27 +80,20 @@ awful.keyboard.append_global_keybindings({
       {description = "lua execute prompt", group = "awesome"}),
 })
 
--- Resizing keybindings
-awful.keyboard.append_global_keybindings({
-	awful.key({ mod, shift }, "k", function(c)
-		helpers.resize_client(client.focus, "up")
-	end, { description = "resize to the up", group = "client" }),
-	awful.key({ mod, shift }, "j", function(c)
-		helpers.resize_client(client.focus, "down")
-	end, { description = "resize to the down", group = "client" }),
-	awful.key({ mod, shift }, "h", function(c)
-		helpers.resize_client(client.focus, "left")
-	end, { description = "resize to the left", group = "client" }),
-	awful.key({ mod, shift }, "l", function(c)
-		helpers.resize_client(client.focus, "right")
-	end, { description = "resize to the right", group = "client" }),
-})
 -- Tags related keybindings
 awful.keyboard.append_global_keybindings({
-    awful.key({ mod, shift }, "h",   awful.tag.viewprev,
-              {description = "view previous", group = "tag"}),
-    awful.key({ mod, shift }, "l",  awful.tag.viewnext,
-              {description = "view next", group = "tag"}),
+    awful.key({ mod, shift }, "h", function(c)
+        awful.client.swap.bydirection('left', c, true)
+    end, {description = "move client left", group = "client"}),
+    awful.key({ mod, shift }, "l", function(c)
+        awful.client.swap.bydirection('right', c, true)
+    end, {description = "move client right", group = "client"}),
+    awful.key({ mod, shift }, "k", function(c)
+        awful.client.swap.bydirection('up', c, true)
+    end, {description = "move client up", group = "client"}),
+    awful.key({ mod, shift }, "j", function(c)
+        awful.client.swap.bydirection('down', c, true)
+    end, {description = "move client down", group = "client"}),
 })
 
 -- Resizing with mouse
