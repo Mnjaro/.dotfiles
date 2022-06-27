@@ -4,7 +4,7 @@
 colors:
   # night colorschemes
   primary:
-    background: '#061115'
+    background: '#151515'
     foreground: '#D9D7D6'
 
   cursor:
