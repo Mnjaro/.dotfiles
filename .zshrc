@@ -8,7 +8,7 @@ alias glo="git log --graph --decorate --oneline"
 alias config='/usr/bin/git --git-dir=/home/jaro/.cfg/ --work-tree=/home/jaro'
 alias fcopy='fzf | xclip -selection clipboard'
 alias vfind='nvim $(fzf)'
-alias l='logo-ls'
+alias l='logo-ls -ll'
 alias la='logo-ls -la'
 alias colorpicker='grim -g "$(slurp -p)" -t ppm - | convert - -format "%[pixel:p{0,0}]" txt:-'
 alias gb="git branch | grep '^\*' | cut -d' ' -f2 | xclip -sel clipboard"
@@ -24,8 +24,11 @@ alias sqlproxy-eimy-qa="cloud_sql_proxy -instances=eimy-cloud-qa:europe-west3:ei
 
 # Zsh
 zstyle ':completion:*' menu select
-export LC_CTYPE=en_US.UTF-8
 export SPACESHIP_GCLOUD_SHOW=false
+export LANG=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 
 # NVM
 export NVM_DIR="$([ -z "/home/jaro" ] && printf %s "/home/jaro/.nvm" || printf %s "/home/jaro/.nvm")"
