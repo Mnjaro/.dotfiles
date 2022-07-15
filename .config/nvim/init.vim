@@ -29,12 +29,20 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 let g:vim_json_conceal=0
+:nmap <Esc>> :vertical res +1<Enter>
+:nmap <Esc>< :vertical res -1<Enter>
 
 xnoremap p pgvy
 " Go to previous line with same indentation as current
 nnoremap <M-,> :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%<' . line('.') . 'l\S', 'be')<CR>
 " Go to next line with same indentation as current
 nnoremap <M-.> :call search('^'. matchstr(getline('.'), '\(^\s*\)') .'\%>' . line('.') . 'l\S', 'e')<CR>
+
+" -----------------------------------------------------------------------------
+" Highlights
+" -----------------------------------------------------------------------------
+highlight Pmenu ctermfg=7 ctermbg=0
+
 
 " -----------------------------------------------------------------------------
 " NERDTree 
@@ -72,4 +80,3 @@ let g:indentLine_char = '|'
 " Prettier
 " -----------------------------------------------------------------------------
 command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument
-
