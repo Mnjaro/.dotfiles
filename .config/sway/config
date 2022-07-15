@@ -129,11 +129,11 @@ bindsym $mod+r mode "resize"
 # Custom bindings to software
 bindsym $mod+p exec grim -g "$(slurp -d)" - | wl-copy
 
-default_border pixel 2
+default_border pixel 1
 
 smart_gaps on
 gaps inner 10
-gaps outer -10
+gaps outer -6
 gaps bottom 1
 gaps top 1
 
